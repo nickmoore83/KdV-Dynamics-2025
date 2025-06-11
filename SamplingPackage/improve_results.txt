@@ -1,0 +1,712 @@
+
+Results from improve_ratio
+beta & ratio & skewness & accept rate & improvement ratio
+
+#—————————————————————————#
+#—————————————————————————#
+Results on arrival Aug 25
+#—————————————————————————#
+#—————————————————————————#
+
+Probably Dubious
+K=16, bprime=40, cratio=160, min_time=30 minutes, nthreads=8.
+Good g: 122.0 minutes for 500 samples.
+Naive g: 46.5 minutes for 5 samples.
+
+good skewness = 0.087
+good acceptance rate = $1.3 \times 10^{-8}$
+Improvement ratio = 42
+
+#—————————————————————————#
+Probably Dubious
+K=32, bprime=40, cratio=300, min_time=30 minutes, nthreads=8.
+Good g: 8 minutes for 2000 samples
+Naive g: 35 minutes for 10 samples
+
+good skewness = 0.16
+good acceptance rate = $1.4 \times 10^{-6}$
+Improvement ratio = 900
+
+
+#—————————————————————————#
+#—————————————————————————#
+Results ran and recorded on Aug 25
+#—————————————————————————#
+#—————————————————————————#
+
+------------------------------
+Results
+K=32, bprime=20, cratio=200, min_time=0 minutes, nthreads=4.
+Good g: 0.00752 minutes for 5000 samples.
+Naive g: 0.0688 minutes for 1125 samples.
+
+good skewness = 0.0476
+good acceptance rate = 0.011
+Improvement ratio = 62.4
+------------------------------
+Results
+K=32, bprime=20, cratio=400, min_time=0 minutes, nthreads=4.
+Good g: 0.382 minutes for 5000 samples.
+Naive g: 2.4 minutes for 1000 samples.
+
+good skewness = 0.0949
+good acceptance rate = 0.000129
+Improvement ratio = 32.1
+
+------------------------------
+Results
+K=32, bprime=40, cratio=0, min_time=0 minutes, nthreads=4.
+Good g: 0.0253 minutes for 5000 samples.
+Naive g: 0.773 minutes for 1008 samples.
+
+good skewness = -0.00475
+good acceptance rate = 0.955
+Improvement ratio = 75800.0
+
+------------------------------
+Results
+K=32, bprime=40, cratio=50, min_time=0 minutes, nthreads=4.
+Good g: 0.00926 minutes for 5000 samples.
+Naive g: 0.502 minutes for 1003 samples.
+
+good skewness = 0.0218
+good acceptance rate = 0.0999
+Improvement ratio = 5180.0
+
+------------------------------
+Results
+K=32, bprime=40, cratio=50, min_time=0 minutes, nthreads=4.
+Good g: 0.00848 minutes for 5000 samples.
+Naive g: 0.351 minutes for 1015 samples.
+
+good skewness = 0.0266
+good acceptance rate = 0.1
+Improvement ratio = 3550.0
+
+------------------------------
+Results
+K=32, bprime=40, cratio=100, min_time=0 minutes, nthreads=4.
+Good g: 0.00831 minutes for 5000 samples.
+Naive g: 0.41 minutes for 1010 samples.
+
+good skewness = 0.0603
+good acceptance rate = 0.0105
+Improvement ratio = 443.0
+
+------------------------------
+Results
+K=32, bprime=40, cratio=150, min_time=0 minutes, nthreads=4.
+Good g: 0.0472 minutes for 5000 samples.
+Naive g: 0.605 minutes for 1001 samples.
+
+good skewness = 0.0782
+good acceptance rate = 0.00113
+Improvement ratio = 70.4
+
+------------------------------
+Results
+K=32, bprime=40, cratio=200, min_time=0 minutes, nthreads=4.
+Good g: 0.394 minutes for 5000 samples.
+Naive g: 0.683 minutes for 1002 samples.
+
+good skewness = 0.103
+good acceptance rate = 0.000124
+Improvement ratio = 8.81
+
+
+#—————————————————————————#
+#—————————————————————————#
+Results on arrival Aug 26
+#—————————————————————————#
+#—————————————————————————#
+
+Results
+K=16, bprime=40, cratio=160, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 1255 samples.
+Naive g: 480.0 minutes for 23 samples.
+
+good skewness = 0.886
+good acceptance rate = 1.29e-8
+Improvement ratio = 59.4
+
+------------------------------
+Results
+K=32, bprime=40, cratio=300, min_time=480 minutes, nthreads=4.
+Good g: 33.3 minutes for 5000 samples.
+Naive g: 480.0 minutes for 105 samples.
+
+good skewness = 0.162
+good acceptance rate = 1.46e-6
+Improvement ratio = 739.0
+
+------------------------------
+Results
+K=32, bprime=20, cratio=600, min_time=480 minutes, nthreads=4.
+Good g: 32.6 minutes for 5000 samples.
+Naive g: 480.0 minutes for 3918 samples.
+
+good skewness = 0.155
+good acceptance rate = 1.5e-6
+Improvement ratio = 20.4
+
+
+#—————————————————————————#
+#—————————————————————————#
+Results on arrival Aug 27
+#—————————————————————————#
+#—————————————————————————#
+
+------------------------------
+Results
+K=32, bprime=20, cratio=800, min_time=480 minutes, nthreads=8.
+Good g: 574.0 minutes for 2000 samples.
+Naive g: 480.0 minutes for 125 samples.
+
+good skewness = 0.214
+good acceptance rate = 1.87e-8
+Improvement ratio = 13.6
+
+
+Still running: improve_ratio(nmodes=32, bprime=40, cratio=400, min_samps_good=2000, min_samps_naive=100, min_time=8*60)
+
+#—————————————————————————#
+#—————————————————————————#
+Results run on Aug 27
+#—————————————————————————#
+#—————————————————————————#
+
+------------------------------
+Results
+K=32, bprime=60, cratio=0, min_time=0.2 minutes, nthreads=8.
+Good g: 0.0293 minutes for 5000 samples.
+Naive g: 1.27 minutes for 100 samples.
+
+good skewness = 0.0051
+good acceptance rate = 0.918
+Improvement ratio = 2.51e6
+
+------------------------------
+Results
+K=32, bprime=60, cratio=50, min_time=0.2 minutes, nthreads=8.
+Good g: 0.0123 minutes for 5000 samples.
+Naive g: 1.05 minutes for 100 samples.
+
+good skewness = 0.043
+good acceptance rate = 0.0313
+Improvement ratio = 71100.0
+
+------------------------------
+Results
+K=32, bprime=60, cratio=100, min_time=0.2 minutes, nthreads=8.
+Good g: 0.024 minutes for 5000 samples.
+Naive g: 0.803 minutes for 100 samples.
+
+good skewness = 0.0846
+good acceptance rate = 0.00107
+Improvement ratio = 1860.0
+
+------------------------------
+Results
+K=32, bprime=60, cratio=150, min_time=0.2 minutes, nthreads=8.
+Good g: 0.246 minutes for 2000 samples.
+Naive g: 4.66 minutes for 100 samples.
+
+good skewness = 0.134
+good acceptance rate = 3.91e-5
+Improvement ratio = 392.0
+
+
+#—————————————————————————#
+#—————————————————————————#
+Results on arrival Aug 28
+#—————————————————————————#
+#—————————————————————————#
+
+------------------------------
+Results
+K=32, bprime=60, cratio=200, min_time=480 minutes, nthreads=8.
+Good g: 16.5 minutes for 5000 samples.
+Naive g: 204.0 minutes for 5000 samples.
+
+good skewness = 0.173
+good acceptance rate = 1.43e-6
+Improvement ratio = 12.7
+
+
+- Still running: improve_ratio(nmodes=32, bprime=40, cratio=400, min_samps_good=2000, min_samps_naive=100, min_time=8*60)
+- Naive has 31 accepted after 2400 mins. Target is 100
+
+#—————————————————————————#
+#—————————————————————————#
+Results on arrival Sep 3
+#—————————————————————————#
+#—————————————————————————#
+
+Might have finished earlier; took 7 days
+------------------------------
+Results
+K=32, bprime=40, cratio=400, min_time=480 minutes, nthreads=8.
+Good g: 575.0 minutes for 2000 samples.
+Naive g: 10200.0 minutes for 100 samples.
+
+good skewness = 0.236
+good acceptance rate = 1.84e-8
+Improvement ratio = 374.0
+
+
+#—————————————————————————#
+#—————————————————————————#
+Sep 9
+#—————————————————————————#
+#—————————————————————————#
+Rerunning two cases to double-check non-monotone behavior of improvement ratio.
+K=32, bprime = 40, cratio = 200 and 300
+
+------------------------------
+Results
+K=32, bprime=40, cratio=200, min_time=480 minutes, nthreads=4.
+Good g: 0.344 minutes for 5000 samples.
+Naive g: 2.64 minutes for 5000 samples.
+
+good skewness = 0.11
+good acceptance rate = 0.000122
+Improvement ratio = 7.83
+
+------------------------------
+Results
+K=32, bprime=40, cratio=300, min_time=480 minutes, nthreads=8.
+Good g: 15.7 minutes for 5000 samples.
+Naive g: 480.0 minutes for 222 samples.
+
+good skewness = 0.167
+good acceptance rate = 1.45e-6
+Improvement ratio = 698.0
+
+#—————————————————————————#
+#—————————————————————————#
+Sep 16
+#—————————————————————————#
+#—————————————————————————#
+------------------------------
+Results
+K=16, bprime=60, cratio=100, min_time=480 minutes, nthreads=8.
+Good g: 284.0 minutes for 5000 samples.
+Naive g: 3050.0 minutes for 100 samples.
+
+good skewness = 0.849
+good acceptance rate = 4.55e-8
+Improvement ratio = 588.0
+
+NOTE: I have most often been using min_samps_good=2000, min_samps_naive=100, min_time=8*60
+
+Oct 1: This run is taking way too long so I am killing it: nmodes=32, bprime=40, cratio=400, min_samps_accept=5000. The good g completed with 2000 samples but naive g takes way too long.
+
+
+
+
+
+
+#—————————————————————————#
+#—————————————————————————#
+Oct 3
+#—————————————————————————#
+#—————————————————————————#
+
+------------------------------
+Results
+K=32, bprime=60, cratio=250, min_time=480 minutes, nthreads=6.
+Good g: 480.0 minutes for 4296 samples.
+Naive g: 309.0 minutes for 5000 samples.
+
+good skewness = 0.231
+good acceptance rate = 5.19e-8
+Improvement ratio = 0.559
+
+WHAT? Improvement ratio is smaller than one???
+
+#—————————————————————————#
+Oct 4
+#—————————————————————————#
+
+Reran this case for sanity check:
+improve_ratio(nmodes=32, bprime=60, cratio=200, min_samps_good=2000, min_samps_naive=100, min_time=8*60)
+Conclusion: The skewness and good acceptance rates are the same as before. The improvement ratio changed from 13 before to now 5. Weird.
+------------------------------
+Results
+K=32, bprime=60, cratio=200, min_time=480 minutes, nthreads=6.
+Good g: 21.3 minutes for 5000 samples.
+Naive g: 97.5 minutes for 5000 samples.
+
+good skewness = 0.176
+good acceptance rate = 1.4e-6
+Improvement ratio = 4.68
+
+------------------------------
+Reran this case too:
+improve_ratio(nmodes=32, bprime=60, cratio=150, min_samps_good=2000, min_samps_naive=100, min_time=1*60)
+Conclusion: Skewness and good acceptance rates are the same. Improvement ratio is now about half of what it was previously. WTF?
+------------------------------
+Results
+K=32, bprime=60, cratio=150, min_time=60 minutes, nthreads=6.
+Good g: 0.801 minutes for 5000 samples.
+Naive g: 60.0 minutes for 2411 samples.
+
+good skewness = 0.132
+good acceptance rate = 3.77e-5
+Improvement ratio = 157.0
+
+
+------------------------------
+------------------------------
+------------------------------
+Now I'm going back to rerun a lot of cases for sanity checks, starting with K=16.
+
+------------------------------
+For K=16, bprime=40, cratio=40 the results are indeed repeatable. 
+I get very good agreement on skewness and acceptance rate, and I get pretty good agreement on improvement ratio (1700 vs 1900). This was a very quick run.
+improve_ratio(nmodes=16, bprime=40, cratio=40, min_samps_good=2000, min_samps_naive=500, min_time=0)
+
+------------------------------
+For K=16, bprime=40, cratio=80 the results are indeed repeatable. 
+I get good agreement on skewness (0.39 vs 0.35), acceptance rate, and improvement (390 vs 333)
+improve_ratio(nmodes=16, bprime=40, cratio=80, min_samps_good=2000, min_samps_naive=200, min_time=0)
+
+------------------------------
+For K=16, bprime=60, cratio=20 the results are indeed repeatable.
+Excellent agreement on skewness and acceptance, get agreement on improvement (120K vs 109K)
+Run took 3.7 minutes, almost entirely for naive g.
+improve_ratio(nmodes=16, bprime=60, cratio=20, min_samps_good=2000, min_samps_naive=200, min_time=0)
+
+------------------------------
+For K=16, bprime=60, cratio=40 the results are indeed repeatable.
+Good agreement on everything, including improvement (23K vs 17.5K)
+Run took 19 minutes
+improve_ratio(nmodes=16, bprime=60, cratio=40, min_samps_good=2000, min_samps_naive=200, min_time=0)
+
+------------------------------
+For K=32, bprime=20, cratio=200 the results are indeed repeatable.
+Excellent agreement on everything, including improvement (62 vs 65)
+Very quick run.
+
+------------------------------
+For K=32, bprime=40, cratio=100 the results are indeed repeatable.
+Good agreement on first two, pretty good agreement on improvement ratio (440 vs 629) 
+Very quick run.
+
+------------------------------
+For K=32, bprime=60, cratio=50 the results are indeed repeatable.
+Good agreement on first two, pretty good agreement on improvement ratio (71K vs 88K) 
+Run took 5 minutes.
+improve_ratio(nmodes=32, bprime=60, cratio=50, min_samps_good=2000, min_samps_naive=200, min_time=0)
+
+CONCLUSION: It looks like all of the short-to-medium size runs are repeatable for both K=16 and K=32. It was only the big runs (K=32, bprime=60, crat=150 or 200) where the improvement ratio changes by a factor of two or more.
+
+
+
+
+
+
+
+
+
+
+
+
+#—————————————————————————#
+Oct 14
+#—————————————————————————#
+NEW PLAN
+Increment nonlinearity ratio so that bprime*cratio has the same increments for each bprime.
+K=16
+bprime = 60, cratio step = 20 (as it already is), up to max of 100 
+bprime = 40, cratio step = 30, up to max of 150
+bprime = 20, cratio step = 60, up to max of 300
+
+K=32
+bprime = 60, cratio step = 50 (as it already is), up to max of 250 or 300 
+bprime = 40, cratio step = 75, up to max of 375 or 450
+bprime = 20, cratio step = 150, up to max of 750 or 900
+
+
+TO DO: Get Data in new format for cases bprime=60 cases for big waves
+Choose one, depending on if big cases for K=32, bprime=20,40 ever finish.
+improve_ratio(nmodes=32, bprime=60, cratio=250, min_samps_good=2000, min_samps_naive=0, min_time=0.1)
+improve_ratio(nmodes=32, bprime=60, cratio=300, min_samps_good=2000, min_samps_naive=0, min_time=0.1)
+
+
+K=16, bprime=40 COMPLETED
+------------------------------
+Results
+K=16, bprime=40, cratio=0, min_time=480 minutes, nthreads=6.
+Good g: 0.0096 minutes for 5000 samples.
+Naive g: 0.797 minutes for 5000 samples.
+
+good skewness = 0.00385
+good acceptance rate = 0.876
+Improvement ratio = 48500.0
+------------------------------
+Results
+K=16, bprime=40, cratio=30, min_time=480 minutes, nthreads=6.
+Good g: 0.00346 minutes for 5000 samples.
+Naive g: 2.21 minutes for 5000 samples.
+
+good skewness = 0.131
+good acceptance rate = 0.0226
+Improvement ratio = 3430.0
+------------------------------
+Results
+K=16, bprime=40, cratio=60, min_time=480 minutes, nthreads=4.
+Good g: 0.0321 minutes for 5000 samples.
+Naive g: 20.3 minutes for 5000 samples.
+
+good skewness = 0.252
+good acceptance rate = 0.000665
+Improvement ratio = 687.0
+------------------------------
+Results
+K=16, bprime=40, cratio=90, min_time=480 minutes, nthreads=4.
+Good g: 0.92 minutes for 5000 samples.
+Naive g: 493.0 minutes for 1889 samples.
+
+good skewness = 0.403
+good acceptance rate = 2.17e-5
+Improvement ratio = 282.0
+------------------------------
+Results
+K=16, bprime=40, cratio=120, min_time=480 minutes, nthreads=4.
+Good g: 25.0 minutes for 5000 samples.
+Naive g: 480.0 minutes for 742 samples.
+
+good skewness = 0.594
+good acceptance rate = 8.0e-7
+Improvement ratio = 134.0
+------------------------------
+Results
+K=16, bprime=40, cratio=150, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 4356 samples.
+Naive g: 801.0 minutes for 100 samples.
+
+good skewness = 0.806
+good acceptance rate = 3.55e-8
+Improvement ratio = 73.9
+
+
+
+
+K=16, bprime=20 COMPLETED
+------------------------------
+Results
+K=16, bprime=20, cratio=0, min_time=480 minutes, nthreads=6.
+Good g: 0.0106 minutes for 5000 samples.
+Naive g: 0.0128 minutes for 5000 samples.
+
+good skewness = 0.00585
+good acceptance rate = 0.954
+Improvement ratio = 472.0
+------------------------------
+Results
+K=16, bprime=20, cratio=60, min_time=480 minutes, nthreads=6.
+Good g: 0.00376 minutes for 5000 samples.
+Naive g: 0.0407 minutes for 5000 samples.
+
+good skewness = 0.109
+good acceptance rate = 0.0244
+Improvement ratio = 60.4
+------------------------------
+Results
+K=16, bprime=20, cratio=120, min_time=480 minutes, nthreads=6.
+Good g: 0.0239 minutes for 5000 samples.
+Naive g: 0.527 minutes for 5000 samples.
+
+good skewness = 0.227
+good acceptance rate = 0.000693
+Improvement ratio = 25.1
+------------------------------
+Results
+K=16, bprime=20, cratio=180, min_time=480 minutes, nthreads=6.
+Good g: 0.683 minutes for 5000 samples.
+Naive g: 10.3 minutes for 5000 samples.
+
+good skewness = 0.371
+good acceptance rate = 2.14e-5
+Improvement ratio = 15.6
+------------------------------
+Results
+K=16, bprime=20, cratio=240, min_time=480 minutes, nthreads=4.
+Good g: 25.3 minutes for 5000 samples.
+Naive g: 295.0 minutes for 5000 samples.
+
+good skewness = 0.527
+good acceptance rate = 7.74e-7
+Improvement ratio = 11.9
+------------------------------
+Results
+K=16, bprime=20, cratio=300, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 4002 samples.
+Naive g: 480.0 minutes for 368 samples.
+
+good skewness = 0.727
+good acceptance rate = 3.21e-8
+Improvement ratio = 10.9
+
+
+
+
+
+
+
+K=32, bprime=60; cratio=0, 150, 250, 300 (other values in table already from previous runs)
+------------------------------
+Results
+K=32, bprime=60, cratio=0, min_time=0.1 minutes, nthreads=4.
+Good g: 0.0236 minutes for 5000 samples.
+Naive g: 0.106 minutes for 1 samples.
+
+good skewness = -0.00682
+good acceptance rate = 0.918
+Improvement ratio = 1.18e7
+------------------------------
+Results
+K=32, bprime=60, cratio=150, min_time=0.1 minutes, nthreads=4.
+Good g: 0.425 minutes for 2005 samples.
+Naive g: 0.101 minutes for 3 samples.
+
+good skewness = 0.123
+good acceptance rate = 3.92e-5
+Improvement ratio = 157.0
+------------------------------
+Results
+K=32, bprime=60, cratio=250, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 3221 samples.
+Naive g: 480.0 minutes for 1434 samples.
+
+good skewness = 0.226
+good acceptance rate = 5.46e-8
+Improvement ratio = 2.28
+
+
+
+K=32, bprime=40; cratio=75, 150, 225, 300, 375, 450 
+------------------------------
+Results
+K=32, bprime=40, cratio=0, min_time=480 minutes, nthreads=9.
+Good g: 0.0369 minutes for 5000 samples.
+Naive g: 1.52 minutes for 5000 samples.
+
+good skewness = -0.0062
+good acceptance rate = 0.955
+Improvement ratio = 65800.0
+------------------------------
+Results
+K=32, bprime=40, cratio=75, min_time=480 minutes, nthreads=9.
+Good g: 0.0108 minutes for 5000 samples.
+Naive g: 1.07 minutes for 5000 samples.
+
+good skewness = 0.0454
+good acceptance rate = 0.0326
+Improvement ratio = 1600.0
+------------------------------
+Results
+K=32, bprime=40, cratio=150, min_time=480 minutes, nthreads=15.
+Good g: 0.0184 minutes for 5000 samples.
+Naive g: 1.03 minutes for 5000 samples.
+
+good skewness = 0.0734
+good acceptance rate = 0.00114
+Improvement ratio = 79.3
+------------------------------
+Results
+K=32, bprime=40, cratio=225, min_time=480 minutes, nthreads=4.
+Good g: 1.04 minutes for 5000 samples.
+Naive g: 2.04 minutes for 5000 samples.
+
+good skewness = 0.122
+good acceptance rate = 4.1e-5
+Improvement ratio = 2.0
+------------------------------
+Results
+K=32, bprime=40, cratio=300, min_time=480 minutes, nthreads=4.
+Good g: 29.1 minutes for 5000 samples.
+Naive g: 480.0 minutes for 119 samples.
+
+good skewness = 0.162
+good acceptance rate = 1.42e-6
+Improvement ratio = 697.0
+------------------------------
+Results
+K=32, bprime=40, cratio=375, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 3162 samples.
+Naive g: 6080.0 minutes for 100 samples.
+
+good skewness = 0.215
+good acceptance rate = 5.47e-8
+Improvement ratio = 410.0
+
+
+
+
+K=32, bprime=20; cratio=150, 300, 450, 600, 750, 900; COMPLETED
+------------------------------
+Results
+K=32, bprime=20, cratio=0, min_time=480 minutes, nthreads=9.
+Good g: 0.0369 minutes for 5000 samples.
+Naive g: 0.0212 minutes for 5000 samples.
+
+good skewness = -0.00502
+good acceptance rate = 0.986
+Improvement ratio = 355.0
+------------------------------
+Results
+K=32, bprime=20, cratio=150, min_time=480 minutes, nthreads=9.
+Good g: 0.0111 minutes for 5000 samples.
+Naive g: 0.0225 minutes for 5000 samples.
+
+good skewness = 0.0364
+good acceptance rate = 0.0342
+Improvement ratio = 13.4
+------------------------------
+Results
+K=32, bprime=20, cratio=300, min_time=480 minutes, nthreads=15.
+Good g: 0.0182 minutes for 5000 samples.
+Naive g: 0.51 minutes for 5000 samples.
+
+good skewness = 0.0756
+good acceptance rate = 0.00119
+Improvement ratio = 41.4
+------------------------------
+Results
+K=32, bprime=20, cratio=450, min_time=480 minutes, nthreads=4.
+Good g: 1.01 minutes for 5000 samples.
+Naive g: 63.0 minutes for 5000 samples.
+
+good skewness = 0.107
+good acceptance rate = 4.21e-5
+Improvement ratio = 27.1
+------------------------------
+Results
+K=32, bprime=20, cratio=600, min_time=480 minutes, nthreads=4.
+Good g: 27.7 minutes for 5000 samples.
+Naive g: 480.0 minutes for 4381 samples.
+
+good skewness = 0.149
+good acceptance rate = 1.51e-6
+Improvement ratio = 20.3
+------------------------------
+Results
+K=32, bprime=20, cratio=750, min_time=480 minutes, nthreads=4.
+Good g: 480.0 minutes for 3181 samples.
+Naive g: 480.0 minutes for 231 samples.
+
+good skewness = 0.193
+good acceptance rate = 5.46e-8
+Improvement ratio = 13.9
+------------------------------
+Results
+K=32, bprime=20, cratio=900, min_time=480 minutes, nthreads=4.
+Good g: 7750.0 minutes for 2000 samples.
+Naive g: 5480.0 minutes for 100 samples.
+
+good skewness = 0.25
+good acceptance rate = 2.06e-9
+Improvement ratio = 14.2
+

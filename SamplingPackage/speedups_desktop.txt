@@ -1,0 +1,33 @@
+# Desktop is 24-core Apple M2 Ultra with 16 performance cores.
+# Running SamplingPackage2
+# Parameters to specify are (nmodes, nsamps_per_thread)
+# Data is nthreads and speedup
+
+# Parameters (128, 1e4)
+1	1	
+2	1.93	
+3	2.89	
+4	3.84	
+5	4.76
+6	5.65
+7	6.5
+8	7.18	
+9	7.77
+10	8.81
+11	-
+12	10.3
+13	-
+14	12.4
+15	-
+16	13.3
+
+# Note: After removing @test the times above did not get better (they got just slightly worse), so no reason to record them.
+
+# Parameters (16, 2e5); before and after removing @test.
+1	1
+2	1.8	1.85
+3	2.39
+4	2.86	3.03
+8	4.41	5.05
+
+# Note: After removing @test the above times got slightly better; nothing amazing though.
