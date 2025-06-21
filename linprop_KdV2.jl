@@ -16,6 +16,7 @@ function linprop_KdV2(C2, C3, D, kvec, a, u0, h, tfin)
     
     t = range(a, length=nsteps+1, step=h)
 
+    #initialize quantities
     Energy = zeros(nsteps)
     M = zeros(nsteps)
     H = zeros(nsteps)
