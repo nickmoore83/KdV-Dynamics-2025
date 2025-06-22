@@ -9,7 +9,7 @@ function solve_kdv_pseudospectral(N=256, D=0.01, C2=0.0, C3=1.0, dt=0.0001, tfin
     propagator = exp.(-alpha_k * dt)           # Exponential linear propagator
 
     # Initial condition
-    u0 = sin.(x) .+ 0.5sin.(2x)
+    u = sin.(x) .+ 0.5sin.(2x)
     u_hat_k = fft(u) / N
 
     nsteps = Int(round(tfinal / dt))
@@ -25,10 +25,12 @@ function solve_kdv_pseudospectral(N=256, D=0.01, C2=0.0, C3=1.0, dt=0.0001, tfin
     end
 
     u_final = real(ifft(u_hat_k) * N)
-    return x, u0, u_final
+    return x, u_final
 end
 
-x, u0, u_final = solve_kdv_pseudospectral()
+x, u_final = solve_kdv_pseudospectral()
+
+u0 = sin.(x) .+ 0.5sin.(2x)
 
 # Plot comparison
 plot(x, u0, label="Initial Condition", lw=2, linestyle=:dash, color=:blue)
