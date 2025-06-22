@@ -9,7 +9,7 @@ function solve_kdv_pseudospectral(N=256, D=0.01, C2=0.0, C3=1.0, dt=0.0001, tfin
     propagator = exp.(-alpha_k * dt)           # Exponential linear propagator
 
     # Initial condition
-    u = sin.(x) .+ 0.5sin.(2x)
+    u0 = sin.(x) .+ 0.5sin.(2x)
     u_hat_k = fft(u) / N
 
     nsteps = Int(round(tfinal / dt))
