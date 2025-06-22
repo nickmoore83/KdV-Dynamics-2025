@@ -1,39 +1,34 @@
 using FFTW, Plots
 
-function solve_burgers_pseudospectral(N=256, D=0.01, dt=0.001, tfinal=1.0)
+function solve_kdv_pseudospectral(N=256, D=0.01, C2=0.0, C3=1.0, dt=0.0001, tfinal=1.0)
     L = 2π
-    x = L * (0:N-1)/N
-    k = [0:N÷2; -N÷2+1:-1]  # Wave numbers
-    
-    u0 = sin.(x) .+ 0.5sin.(2x)
-    u = copy(u0)
-    
-    propagator = exp.(-D * k.^2 * dt)
-    
-    nsteps = Int(round(tfinal/dt))
-    
-    for step in 1:nsteps
-        # Compute nonlinear term in physical space
-        u_hat = fft(u)
-        ux_hat = im * k .* u_hat
-        ux = real(ifft(ux_hat))
-        nonlinear_term = -u .* ux  # -u*u_x for Burgers equation
-        
-        # Transform nonlinear term to Spectral space
-        v_hat = fft(nonlinear_term)
-        
-        # Apply the propagator
-        u_hat = propagator .* (u_hat + dt * v_hat)
-        
-        # Transform back to physical space
-        u = real(ifft(u_hat))
+    x = L * (0:N-1) / N
+    k = fftfreq(N) * N
+    ik = im .* k
+    alpha_k = D .* k.^2 .- C2 .* ik.^3         # Linear part
+    propagator = exp.(-alpha_k * dt)           # Exponential linear propagator
+
+    # Initial condition
+    u = sin.(x) .+ 0.5sin.(2x)
+    u_hat_k = fft(u) / N
+
+    nsteps = Int(round(tfinal / dt))
+
+    for n in 1:nsteps
+        u = real(ifft(u_hat_k) * N)            # Back to physical space
+        u_x = real(ifft(ik .* u_hat_k) * N)    # Derivative in physical space
+        nonlinear_term = u .* u_x
+        v_hat_k = fft(nonlinear_term) / N      # Nonlinear term in Fourier space
+
+        # Time stepping
+        u_hat_k = (u_hat_k .- C3 * dt .* v_hat_k) .* propagator
     end
-    
-    return x, u0, u
+
+    u_final = real(ifft(u_hat_k) * N)
+    return x, u0, u_final
 end
 
-# Solve and plot
-x, u0, u_final = solve_burgers_pseudospectral()
+x, u0, u_final = solve_kdv_pseudospectral()
 
 # Plot comparison
 plot(x, u0, label="Initial Condition", lw=2, linestyle=:dash, color=:blue)
