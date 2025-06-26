@@ -1,15 +1,11 @@
 using FFTW, Plots, Printf
 
-function trap(y, x)
-    area = 0.0
-    for i in 1:length(x)-1
-        dx = x[i+1] - x[i]
-        area += dx/2 * (y[i] + y[i+1])
-    end
-    return area
+function trap_periodic(fvals, x)
+    h = x[2] - x[1]
+    return h * sum(fvals)
 end
 
-function solve_kdv_pseudospectral(N=256, D=0.01, C2=1.0, C3=0.0, dt=0.1, tfinal=1.0)
+function solve_kdv_pseudospectral(N=256, D=0.01, C2=0.0, C3=1.0, dt=0.1, tfinal=1.0)
     L = 2π
     x = L * (0:N-1) / N
     k = [0:N÷2; -N÷2+1:-1]
@@ -38,35 +34,45 @@ function solve_kdv_pseudospectral(N=256, D=0.01, C2=1.0, C3=0.0, dt=0.1, tfinal=
         # Time stepping
         u_hat_k = (u_hat_k .- C3 * dt .* v_hat_k) .* propagator
 
-        E[n] = 0.5 * trap(u.^2, x)
-        M[n] = trap(u, x)
-        H[n] = (C2/2) * trap(u_x.^2, x) - (C3/6) * trap(u.^3, x)
+        E[n] = 0.5 * trap_periodic(u.^2, x)
+        M[n] = trap_periodic(u, x)
+        H[n] = (C2/2) * trap_periodic(u_x.^2, x) - (C3/6) * trap_periodic(u.^3, x)
     end
 
     u_final = real(ifft(u_hat_k) * N)
-    return x, u_final, E, M, H, times
+    return x, u0, u_final, E, M, H, times
 end
 
 # Solve and get final result
-x, u_final, E, M, H, times = solve_kdv_pseudospectral()
+x, u0, u_final, E, M, H, times = solve_kdv_pseudospectral()
 
-# Initial condition for plotting
-u_initial = sin.(x)
 # Plotting
 p = plot(x, u_final, lw=2, label="Final solution", xlabel="x", ylabel="u(x, t)",
          title="KdV Solution (Pseudo-Spectral)", legend=:topright)
-plot!(p, x, u_initial, lw=2, ls=:dash, label="Initial condition")
+plot!(p, x, u0, lw=2, ls=:dash, label="Initial condition")
 display(p)
 
-# Initial values (at time t = 0)
-E0, M0, H0 = E[1], M[1], H[1]
+println("\nEnergy error: ", maximum(abs.(E .- E[1])))
+println("Momentum error: ", maximum(abs.(M .- M[1])))
+println("Hamiltonian error: ", maximum(abs.(H .- H[1])))
 
-# Relative errors
-E_err = abs.((E .- E0) ./ E0)
-M_err = abs.((M .- M0) ./ M0)
-H_err = abs.((H .- H0) ./ H0)
 
-println("    t     |    E_error    |    M_error    |    H_error")
-for i in 1:length(times)
-    @printf("%8.4f | %12.4e | %12.4e | %12.4e\n", times[i], E_err[i], M_err[i], H_err[i])
+println(@sprintf("%6s | %12s | %12s | %12s", "t", "E", "M", "H"))
+println("-"^52)
+for i in eachindex(times)
+    println(@sprintf("%6.2f | %12.5e | %12.5e | %12.5e", times[i], E[i], M[i], H[i]))
 end
+
+# L2 error over time for E, M, H
+function l2_time_error(Q, dt)
+    return sqrt(dt * sum((Q .- Q[1]).^2))
+end
+
+l2_E = l2_time_error(E, dt)
+l2_M = l2_time_error(M, dt)
+l2_H = l2_time_error(H, dt)
+
+println("\nL2 error over time:")
+println("L2 error (E): ", @sprintf("%.5e", l2_E))
+println("L2 error (M): ", @sprintf("%.5e", l2_M))
+println("L2 error (H): ", @sprintf("%.5e", l2_H))
