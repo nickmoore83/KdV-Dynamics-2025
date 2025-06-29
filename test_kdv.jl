@@ -51,8 +51,14 @@ function test_kdv()
 
 		#4. TO DO: Calculate the relative L2 error between the exact and numerical solution at tfin.
 		uhat_exact = #FILL IN the formula for uhat_exact at tfin.
-		L2_err = energy(uhat_exact - uhat[:,end])/energy(uhat_exact)
-		println("L2 error between exact and numerical solution is $(L2_err)")
+		err1 = energy(uhat_exact - uhat[:,end])/energy(uhat_exact)
+		println("L2 error between exact and numerical solution is $(err1)")
+
+		#5. TO DO: Also calculate the error with a dt/2 and estimate the order of convergence.
+		tvals,uhat,En,Mom,Ham = kdv_solve(pde_params, uhat_0, dt/2, tfin)
+		err2 = energy(uhat_exact - uhat[:,end])/energy(uhat_exact)
+		order = # FILL IN the appropriate formula using err1 and err2
+		println("The estimated order is $(order)")
 
 
 	#III. Test conserved quantities of the KdV equation (i.e. D=0)
@@ -68,9 +74,10 @@ function test_kdv()
 
 		#4. Calculate relative error between the initial and final values of E, M, and H.
 		# Here is an example of the code for Energy; Please FILL IN the code for M and H.
-		E_err = abs(En[end]-En[1])/abs(En[1])
-		println("Relative errors of E, M, H are $(Erel_err)")
+		E_err1 = abs(En[end]-En[1])/abs(En[1])
+		println("Relative errors of E, M, H are $(E_err1)")
 
+		#4. TO DO: Also estimate the order of convergnece using dt/2.
 end
 
 test_kdv()
