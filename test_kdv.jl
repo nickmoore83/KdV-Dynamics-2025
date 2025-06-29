@@ -77,7 +77,7 @@ function test_kdv()
 		E_err1 = abs(En[end]-En[1])/abs(En[1])
 		println("Relative errors of E, M, H are $(E_err1)")
 
-		#4. TO DO: Also estimate the order of convergnece using dt/2.
+		#5. TO DO: Also estimate the order of convergnece using dt/2.
 end
 
 test_kdv()
