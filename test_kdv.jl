@@ -42,7 +42,7 @@ function test_kdv()
 		pde_params = PDE_params(D=rand(), C2=rand(), C3=0.)
 
 		#2. Set the initial conditions.
-		uhat_0 = randn(Complex{Float64}, BigK)
+		uhat_0 = randn(Complex{Float64}, BigK+1)
 		# Note: I think we should normalize to make energy equal to one for this test.
 		uhat_0 = uhat_0./energy(uhat_0)
 
@@ -81,3 +81,4 @@ function test_kdv()
 end
 
 test_kdv()
+
